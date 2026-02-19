@@ -663,8 +663,8 @@ If it is impossible to activate symbolic links, copy the content of `site/plugin
 
 **Solutions:**
 - If you haven't got a license yet? Get a [license](https://plain-solutions.net/?product=801346).
-- Your server needs a connection to the license server: [https://plain-solutions.net](https://plain-solutions.net)
-- Your license key was already validated by another host: Send me [an email](mailto:kirby@plain-solutions.net) **with your license key** to release the assigment.
+- Your server needs a connection to the license server: [https://plain-solutions.net](https://plain-solutions.net).
+- Your license key was already validated by another host [release the assigment here](https://plain-solutions.net/unlink).
 - Delete the license file `/site/config/.formblock_license` (if present) and try again. 
 
 ---

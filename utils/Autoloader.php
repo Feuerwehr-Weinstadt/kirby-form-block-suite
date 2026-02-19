@@ -129,7 +129,7 @@ class Autoloader
     {
         $classes = [];
         $this->_dirWalker($root, function ($path, $file) use (&$classes) {
-            $prefix = array_map('ucfirst', explode('/', $this->name));
+            $prefix = array_map([$this, 'toPascalCase'], explode('/', $this->name));
             $classname = A::merge($prefix, explode('/', $path));
             $classes[implode('\\', $classname)] = $file;
         });
@@ -137,6 +137,12 @@ class Autoloader
         F::loadClasses($classes);
     }
 
+    function toPascalCase(string $string): string
+    {
+        $string = str_replace(['-', '_'], ' ', strtolower($string));
+        $string = ucwords($string);
+        return str_replace(' ', '', $string);
+    }
 
     /**
      * Autoload translations
